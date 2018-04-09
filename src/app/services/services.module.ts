@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { BookService } from './book.services';
+import { TestService } from './test.services';
 
 @NgModule({
   imports: [
@@ -9,7 +9,7 @@ import { BookService } from './book.services';
   ],
   declarations: [],
   providers: [
-    BookService
+    TestService
   ]
 })
 export class ServicesModule { }

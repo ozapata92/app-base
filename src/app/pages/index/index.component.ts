@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BookService } from '../../services/book.services';
+import { TestService } from '../../services/test.services';
 import { error } from 'util';
 
 @Component({
@@ -10,13 +10,11 @@ import { error } from 'util';
 
 export class IndexComponent implements OnInit {
   datos:Object;
-  title:string = "Hola";
-  someProperty:string = '';
 
-  constructor(private bookService:BookService) { }
+  constructor(private testService:TestService) { }
 
   ngOnInit() {
-    this.bookService.getData().subscribe(
+    this.testService.getData().subscribe(
       data => {
         this.datos = data;
         console.log(this.datos);
